@@ -1,0 +1,22 @@
+$backgroundColor: #FFFFFF;
+$backgroundColorOnHover: #07C06A;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: 0.9375rem solid $backgroundColor;
+  background-color: $backgroundColor;
+  &:hover {
+    border-color: $backgroundColorOnHover;
+    button {
+      background-color: $backgroundColorOnHover;
+      border-color: $backgroundColor;
+    }
+  }
+  &[data-variant='default']:hover {
+    background-color: $backgroundColorOnHover;
+  }
+}

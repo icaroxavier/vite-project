@@ -1,0 +1,48 @@
+$backgroundColor: #2D3E4E;
+$disabledBackgroundColor: #AAAAAA;
+$color: #FFFFFF;
+.container {
+  background-color: $backgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.6875rem; 
+  padding-right: 1.6875rem;
+  height: 4.375rem;
+  border-radius: 4.375rem;
+  border: 2px solid $backgroundColor;
+  cursor: pointer;
+  gap: 1rem;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: $color;
+  font-weight: 600;
+  font-size: 1.1875rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.5px;
+  text-align: left;
+  
+  overflow: hidden;
+
+  &[data-variant='default'] {
+    text-overflow: "";
+    -o-text-overflow: "";
+    -ms-text-overflow: ""; 
+    white-space: nowrap;
+  }
+  &[data-variant='icon']:hover {
+    overflow: hidden;
+    line-clamp: 2;             
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;       
+  }
+
+  &:disabled {
+    background-color: $disabledBackgroundColor !important;
+    border-color: $disabledBackgroundColor !important;
+    cursor: auto;
+  }
+  
+}
